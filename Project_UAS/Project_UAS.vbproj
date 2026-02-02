@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FE9A531-19D8-46FF-8829-3D1EF361ACE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Project_UAS.My.MyApplication</StartupObject>
+    <RootNamespace>Project_UAS</RootNamespace>
+    <AssemblyName>Project_UAS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Project_UAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Project_UAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.5\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="MySql.Data.MySqlClient.Authentication" />
+    <Import Include="MySql.Data.MySqlClient.Memcached" />
+    <Import Include="MySql.Data.MySqlClient.Properties" />
+    <Import Include="MySql.Data.MySqlClient.Replication" />
+    <Import Include="MySql.Data.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystLaporan\CrystLaporanDataDosen.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystLaporanDataDosen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystLaporan\CrystLaporanDataMatakuliah.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystLaporanDataMatakuliah.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystLaporan\CrystLaporanPengampuMatkul.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystLaporanPengampuMatkul.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystLaporan\CrystLaporanPenjadMatkul.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystLaporanPenjadMatkul.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="data hari\FrmDataHari.Designer.vb">
+      <DependentUpon>FrmDataHari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="data hari\FrmDataHari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data ruangan\FrmInputRuangan.Designer.vb">
+      <DependentUpon>FrmInputRuangan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="data ruangan\FrmInputRuangan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanDataMatakuliah.Designer.vb">
+      <DependentUpon>FrmLaporanDataMatakuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanDataMatakuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanPenjadMatakuliah.Designer.vb">
+      <DependentUpon>FrmLaporanPenjadMatakuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanPenjadMatakuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu utama\FrmAboutBox.Designer.vb">
+      <DependentUpon>FrmAboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu utama\FrmAboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jurusan\FrmDataJurusan.Designer.vb">
+      <DependentUpon>FrmDataJurusan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jurusan\FrmDataJurusan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data ruangan\FrmDataRuangan.Designer.vb">
+      <DependentUpon>FrmDataRuangan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="data ruangan\FrmDataRuangan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data matakuliah\FrmDataMatakuliah.Designer.vb">
+      <DependentUpon>FrmDataMatakuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="data matakuliah\FrmDataMatakuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jurusan\FrmInputJurusan.Designer.vb">
+      <DependentUpon>FrmInputJurusan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jurusan\FrmInputJurusan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanDataDosen.Designer.vb">
+      <DependentUpon>FrmLaporanDataDosen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanDataDosen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanDataDosenPengampuMatkul.Designer.vb">
+      <DependentUpon>FrmLaporanDataDosenPengampuMatkul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\FrmLaporanDataDosenPengampuMatkul.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengampu\FrmDataDosenPengampuMatakul.Designer.vb">
+      <DependentUpon>FrmDataDosenPengampuMatakul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pengampu\FrmDataDosenPengampuMatakul.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="penjadwalan\FrmDataPenjadMatkul.Designer.vb">
+      <DependentUpon>FrmDataPenjadMatkul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="penjadwalan\FrmDataPenjadMatkul.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengampu\FrmInputDataDosenPengampuMatakul.Designer.vb">
+      <DependentUpon>FrmInputDataDosenPengampuMatakul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pengampu\FrmInputDataDosenPengampuMatakul.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data matakuliah\FrmInputDataMatakuliah.Designer.vb">
+      <DependentUpon>FrmInputDataMatakuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="data matakuliah\FrmInputDataMatakuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu utama\FormMenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu utama\FormMenuUtama.Designer.vb">
+      <DependentUpon>FormMenuUtama.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dosen\FrmDataDosen.Designer.vb">
+      <DependentUpon>FrmDataDosen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dosen\FrmDataDosen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dosen\FrmInputDataDosen.Designer.vb">
+      <DependentUpon>FrmInputDataDosen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dosen\FrmInputDataDosen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="penjadwalan\FrmInputDataPenjadMatkul.Designer.vb">
+      <DependentUpon>FrmInputDataPenjadMatkul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="penjadwalan\FrmInputDataPenjadMatkul.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data hari\FrmInputHari.Designer.vb">
+      <DependentUpon>FrmInputHari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="data hari\FrmInputHari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="koneksi\MBDkoneksi.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CrystLaporan\CrystLaporanDataDosen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystLaporanDataDosen.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CrystLaporan\CrystLaporanDataMatakuliah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystLaporanDataMatakuliah.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CrystLaporan\CrystLaporanPengampuMatkul.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystLaporanPengampuMatkul.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="CrystLaporan\CrystLaporanPenjadMatkul.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystLaporanPenjadMatkul.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data hari\FrmDataHari.resx">
+      <DependentUpon>FrmDataHari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data ruangan\FrmInputRuangan.resx">
+      <DependentUpon>FrmInputRuangan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\FrmLaporanDataDosen.resx">
+      <DependentUpon>FrmLaporanDataDosen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\FrmLaporanDataDosenPengampuMatkul.resx">
+      <DependentUpon>FrmLaporanDataDosenPengampuMatkul.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\FrmLaporanDataMatakuliah.resx">
+      <DependentUpon>FrmLaporanDataMatakuliah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\FrmLaporanPenjadMatakuliah.resx">
+      <DependentUpon>FrmLaporanPenjadMatakuliah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu utama\FrmAboutBox.resx">
+      <DependentUpon>FrmAboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jurusan\FrmDataJurusan.resx">
+      <DependentUpon>FrmDataJurusan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data ruangan\FrmDataRuangan.resx">
+      <DependentUpon>FrmDataRuangan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data matakuliah\FrmDataMatakuliah.resx">
+      <DependentUpon>FrmDataMatakuliah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jurusan\FrmInputJurusan.resx">
+      <DependentUpon>FrmInputJurusan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengampu\FrmDataDosenPengampuMatakul.resx">
+      <DependentUpon>FrmDataDosenPengampuMatakul.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="penjadwalan\FrmDataPenjadMatkul.resx">
+      <DependentUpon>FrmDataPenjadMatkul.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data matakuliah\FrmInputDataMatakuliah.resx">
+      <DependentUpon>FrmInputDataMatakuliah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu utama\FormMenuUtama.resx">
+      <DependentUpon>FormMenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dosen\FrmDataDosen.resx">
+      <DependentUpon>FrmDataDosen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dosen\FrmInputDataDosen.resx">
+      <DependentUpon>FrmInputDataDosen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengampu\FrmInputDataDosenPengampuMatakul.resx">
+      <DependentUpon>FrmInputDataDosenPengampuMatakul.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="penjadwalan\FrmInputDataPenjadMatkul.resx">
+      <DependentUpon>FrmInputDataPenjadMatkul.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data hari\FrmInputHari.resx">
+      <DependentUpon>FrmInputHari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
